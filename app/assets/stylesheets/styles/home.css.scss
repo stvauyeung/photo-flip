@@ -1,0 +1,25 @@
+.spacing {
+  padding-top: 15%;
+}
+.image {
+  img {
+    width: 70%;
+    float: left;
+  }
+
+  .pointer {
+    width: 15%;
+    padding-top: 15%;
+    float: left;
+    text-align: center;
+    font-size: 36pt;
+
+    p {
+      cursor: pointer;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
