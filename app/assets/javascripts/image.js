@@ -24,7 +24,11 @@ $(document).on('page:change', function() {
       var newImage = images.length + currentImage;
     };
     
-    $('#main-img').attr('src', images[newImage]);
+    var image = $('#main-img');
+    image.fadeOut(500, function() {
+      image.attr('src', images[newImage]);
+      image.fadeIn(500);
+    });
     console.log(currentImage);
   });
   
@@ -41,7 +45,11 @@ $(document).on('page:change', function() {
       var newImage = currentImage - 1;
     };
 
-    $('#main-img').attr('src', images[newImage]);
+    var image = $('#main-img');
+    image.fadeOut(500, function() {
+      image.attr('src', images[newImage]);
+      image.fadeIn(500);
+    });
     console.log(currentImage);
   });
 });
