@@ -1,13 +1,23 @@
 .container
-  .spacing
+  .row.spacing
+    .col-md-2
+    .col-md-8.hero-text
+      el Burto
+    .col-md-2
   .row
     .col-md-2
     .col-md-8.image
-      .pointer
-        %p
-          <
-      =image_tag('aaaaaa.JPG')
-      .pointer
-        %p
-          >
+      .row
+        .pointer
+          %p
+            <
+        =image_tag('aaaaaa.JPG')
+        .pointer
+          %p
+            >
+      .row
+        %form.comment-box{"role" => "form"}
+          .form-group
+            %textarea.form-control{"type" => "email", "rows" => 3, "placeholder" => "What do you have to say..?"}
+          %button.btn{"type" => "submit"} INPUT COMMENT
     .col-md-2

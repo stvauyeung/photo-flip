@@ -1,6 +1,23 @@
-.spacing {
-  padding-top: 15%;
+html, body {
+  background: -webkit-linear-gradient(#F0F0F0, #3333CC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F0F0F0, #3333CC); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F0F0F0, #3333CC); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F0F0F0, #3333CC); /* Standard syntax */
+  height: 100%;
 }
+
+.spacing {
+
+}
+
+.hero-text {
+  font-size: 800%;
+  font-family: monospace;
+  line-height: 80%;
+  letter-spacing: 0.3em;
+  padding-bottom: 20px;
+}
+
 .image {
   img {
     width: 70%;
@@ -21,5 +38,13 @@
         font-weight: bold;
       }
     }
+  }
+}
+
+.comment-box {
+  padding: 2.5% 2.5%;
+
+  .btn {
+    width: 100%;
   }
 }
