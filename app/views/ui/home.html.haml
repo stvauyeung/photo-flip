@@ -2,22 +2,22 @@
   .row.spacing
     .col-md-2
     .col-md-8.hero-text
-      el Burto
+      burt &co.
     .col-md-2
   .row
     .col-md-2
     .col-md-8.image
       .row
         .pointer
-          %p
+          %p#point-left
             <
-        =image_tag('aaaaaa.JPG')
+        %img#main-img{"src" => "/images/aaaaaa.JPG"}
         .pointer
-          %p
+          %p#point-right
             >
       .row
         %form.comment-box{"role" => "form"}
           .form-group
-            %textarea.form-control{"type" => "email", "rows" => 3, "placeholder" => "What do you have to say..?"}
-          %button.btn{"type" => "submit"} INPUT COMMENT
+            %textarea.form-control{"type" => "email", "rows" => 3, "placeholder" => "Leave a comment for Burt &co."}
+          %button.btn{"type" => "submit"} POST COMMENT
     .col-md-2
