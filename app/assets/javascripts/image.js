@@ -10,6 +10,7 @@ $(document).on('page:change', function() {
   "/images/vvvvvv.JPG", "/images/wwwww.JPG", "/images/xxxxxx.JPG"];
 
   var currentImage = 0;
+  console.log(currentImage);
 
 
   $('#point-left').on('click', function() {
@@ -17,8 +18,8 @@ $(document).on('page:change', function() {
       currentImage = -1
       var newImage = images.length + currentImage;
     } else if (currentImage > 0 && currentImage < images.length) {
+      var newImage = currentImage - 1;
       currentImage = currentImage - 1;
-      var newImage = currentImage;
     } else {
       currentImage = currentImage - 1;
       var newImage = images.length + currentImage;
@@ -33,16 +34,22 @@ $(document).on('page:change', function() {
   });
   
   $('#point-right').on('click', function() {
-    currentImage = currentImage + 1;
+    // currentImage = currentImage + 1;
     if (currentImage == 0) {
-      var newImage = 0;
-    } else if (currentImage == 23) {
+      currentImage = currentImage + 1;
+      var newImage = currentImage;
+    } else if (currentImage == images.length - 1ds) {
       currentImage = 0;
       var newImage = currentImage;
+    } else if (currentImage == -1) {
+      var newImage = 0;
+      currentImage = currentImage + 1;
     } else if (currentImage < 0) {
+      currentImage = currentImage + 1;
       var newImage = images.length + currentImage;
     } else {
-      var newImage = currentImage - 1;
+      currentImage = currentImage + 1;
+      var newImage = currentImage;
     };
 
     var image = $('#main-img');
