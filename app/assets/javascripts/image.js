@@ -34,11 +34,10 @@ $(document).on('page:change', function() {
   });
   
   $('#point-right').on('click', function() {
-    // currentImage = currentImage + 1;
     if (currentImage == 0) {
       currentImage = currentImage + 1;
       var newImage = currentImage;
-    } else if (currentImage == images.length - 1ds) {
+    } else if (currentImage == images.length - 1) {
       currentImage = 0;
       var newImage = currentImage;
     } else if (currentImage == -1) {
@@ -55,7 +54,7 @@ $(document).on('page:change', function() {
     var image = $('#main-img');
     image.fadeOut(500, function() {
       image.attr('src', images[newImage]);
-      image.fadeIn(500);
+      image.fadeIn(700);
     });
     console.log(currentImage);
   });

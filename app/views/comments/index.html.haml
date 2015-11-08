@@ -16,8 +16,8 @@
           %p#point-right
             >
       .row
-        %form.comment-box{"role" => "form"}
-          .form-group
-            %textarea.form-control{"type" => "email", "rows" => 3, "placeholder" => "Leave a comment for Burt &co."}
-          %button.btn{"type" => "submit"} POST COMMENT
+        %form.comment-box{"role" => "form", "method" => "post", "action" => "/comments"}
+          = form_for @comment, html: {class: "form-group"} do |f|
+            =f.text_area :content, class: "form-control", rows: 3, placeholder: "Leave a message for Burt &co."
+            =f.submit "POST COMMENT", class: "btn"
     .col-md-2
