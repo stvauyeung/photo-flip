@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @comment = Comment.new
+    @comments = Comment.last(30).reverse
   end
 
   def create
