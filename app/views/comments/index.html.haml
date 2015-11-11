@@ -16,16 +16,11 @@
           %p#point-right
             >
       .row
-        %form.comment-box{"role" => "form", "method" => "post", "action" => "/comments"}
-          = form_for @comment, html: {class: "form-group"} do |f|
+        .comment-box
+          = form_for @comment, remote: true, html: {class: "form-group"} do |f|
             =f.text_area :content, class: "form-control", rows: 3, placeholder: "leave a message for burt &co."
-            =f.submit "POST MESSAGE", class: "btn"
+            =f.submit "POST MESSAGE", class: "btn", id: "comment-submit"
       .row
         %ul.comments-list
-          - @comments.each do |c|
-            %li
-              .comment-content
-                = c.content
-              .comment-created
-                = "Posted #{time_ago_in_words(c.created_at)} ago"
+          = render @comments
     .col-md-2
